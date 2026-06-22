@@ -1,0 +1,21 @@
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: pulumi-argo-demo
+  namespace: demo
+spec:
+  serviceAccountName: pulumi-argo-demo
+  programRef:
+    name: pulumi-argo-demo
+  stack: dev
+  refresh: true
+  destroyOnFinalize: true
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+  workspaceTemplate:
+    spec:
+      image: pulumi/pulumi:3.202.0-nonroot

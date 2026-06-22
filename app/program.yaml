@@ -1,0 +1,13 @@
+apiVersion: pulumi.com/v1
+kind: Program
+metadata:
+  name: pulumi-argo-demo
+  namespace: demo
+program:
+  resources:
+    demoPet:
+      type: random:RandomPet
+      properties:
+        length: 2
+  outputs:
+    petName: ${demoPet.id}

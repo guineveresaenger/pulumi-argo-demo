@@ -1,0 +1,3 @@
+# Never commit a real token secret
+cluster-prereqs/pulumi-token-secret.yaml
+*.secret.yaml
