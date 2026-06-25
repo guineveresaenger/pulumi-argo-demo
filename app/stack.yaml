@@ -6,7 +6,7 @@ metadata:
 spec:
   serviceAccountName: pulumi-argo-demo
   programRef:
-    name: pulumi-argo-demo
+    name: guin-is-awesome
   stack: dev
   refresh: true
   destroyOnFinalize: true
