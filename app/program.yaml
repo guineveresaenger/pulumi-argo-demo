@@ -6,7 +6,7 @@ metadata:
 program:
   resources:
     demoPet:
-      type: random:RandomPet
+      type: random:RandomCat
       properties:
         length: 2
   outputs:
